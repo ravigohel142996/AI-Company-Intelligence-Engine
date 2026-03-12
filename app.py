@@ -78,6 +78,10 @@ def main() -> None:
         competition_levels=filters["competition_levels"],
     )
 
+    # Acknowledge the explicit "Analyze" button click with a toast message
+    if filters["analyze_clicked"]:
+        st.toast(f"✅ Analyzing {len(df)} companies with current filters.", icon="🔍")
+
     if df.empty:
         st.warning("⚠️ No companies match the current filters. Please adjust the sidebar.")
         return

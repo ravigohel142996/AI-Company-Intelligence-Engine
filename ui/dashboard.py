@@ -63,7 +63,7 @@ def render_global_analytics(df: pd.DataFrame) -> None:
         value=f"{summary['avg_intelligence_index']:.1f}",
         help="Composite intelligence index (0–100)",
     )
-    st.caption(f"Analysing **{summary['total_companies']}** companies")
+    st.caption(f"Analyzing **{summary['total_companies']}** companies")
 
 
 # ---------------------------------------------------------------------------
